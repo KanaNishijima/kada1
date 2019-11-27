@@ -1,0 +1,16 @@
+const str1 = "abc" 
+const str2 = "'abc'" 
+const str3 = '"abc"' 
+const str4 = '{"a": undefined}' 
+const str5 = '{"a": 123}' 
+const str6 = '{a: 123}'  
+ 
+ console.log(JSON.stringify(str1))
+
+ try { 
+     console.log(JSON.parse(str1))     
+} catch (error) { 
+     console.log(error) 
+     // abc という文字列は正しい JSON ではないから。 
+     // 正しくは "abc" 
+} 
