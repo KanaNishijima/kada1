@@ -1,0 +1,22 @@
+<html> 
+<head> 
+<style> 
+    button { 
+        font-size: 50px; 
+    } 
+</style> 
+</head> 
+<body> 
+     <button id="button">おみくじをひく</button> 
+     <script> 
+         const button = document.getElementById('button') 
+         button.addEventListener('click', () => { 
+             fetch('https://3000-ae7722b2-ebd3-4efe-8693-4f03e71c3a0d.ws-ap01.gitpod.io/kadai-8/') 
+                .then(res => res.text()) 
+                 .then(data => alert(data)) 
+         }) 
+     </script> 
+ </body> 
+ </html> 
+ 
+ 
